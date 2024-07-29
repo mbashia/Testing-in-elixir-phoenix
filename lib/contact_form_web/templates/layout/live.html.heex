@@ -1,5 +1,5 @@
 <main class="">
-   <%= if @flash["info"] do %>
+  <%= if @flash["info"] do %>
     <p class="alert alert-info" role="alert" phx-click="lv:clear-flash" phx-value-key="info">
       <%= live_flash(@flash, :info) %>
     </p>
