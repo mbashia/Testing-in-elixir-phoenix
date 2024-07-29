@@ -5,6 +5,132 @@
 /* This file is for your main application CSS */
 
 /* Alerts and form errors used by phx.new */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Jura Font Faces */
+@font-face {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Jura Light"), local("Jura-Light"),
+    url(https://fonts.gstatic.com/s/jura/v14/6xKjdSjlsSbN1twXK-IUCnvux7ox.woff2)
+      format("woff2");
+}
+
+@font-face {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Jura Regular"), local("Jura-Regular"),
+    url(https://fonts.gstatic.com/s/jura/v14/6xKtdSjlsSbN1twXK-EfMnvv8A.woff2)
+      format("woff2");
+}
+
+@font-face {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Jura Medium"), local("Jura-Medium"),
+    url(https://fonts.gstatic.com/s/jura/v14/6xKjdSjlsSbN1twXK-IUCnvux7ox.woff2)
+      format("woff2");
+}
+
+@font-face {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Jura Bold"), local("Jura-Bold"),
+    url(https://fonts.gstatic.com/s/jura/v14/6xKjdSjlsSbN1twXK-IUCnvux7ox.woff2)
+      format("woff2");
+}
+
+/* Karla Font Faces */
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Karla ExtraLight"), local("Karla-ExtraLight"),
+    url(https://fonts.gstatic.com/s/karla/v14/qkBWXvfzLFyfBdiVBARp1g.woff2)
+      format("woff2");
+}
+
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Karla Regular"), local("Karla-Regular"),
+    url(https://fonts.gstatic.com/s/karla/v14/qkBWXvfzLFyfBdiVBARp1g.woff2)
+      format("woff2");
+}
+
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Karla SemiBold"), local("Karla-SemiBold"),
+    url(https://fonts.gstatic.com/s/karla/v14/qkBWXvfzLFyfBdiVBARp1g.woff2)
+      format("woff2");
+}
+
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Karla Bold"), local("Karla-Bold"),
+    url(https://fonts.gstatic.com/s/karla/v14/qkBWXvfzLFyfBdiVBARp1g.woff2)
+      format("woff2");
+}
+
+/* Define classes using the specific font weights for Jura */
+.jura-300 {
+  font-family: "Jura", sans-serif;
+  font-weight: 300;
+}
+
+.jura-400 {
+  font-family: "Jura", sans-serif;
+  font-weight: 400;
+}
+
+.jura-500 {
+  font-family: "Jura", sans-serif;
+  font-weight: 500;
+}
+
+.jura-700 {
+  font-family: "Jura", sans-serif;
+  font-weight: 700;
+}
+
+/* Define classes using the specific font weights for Karla */
+.karla-200 {
+  font-family: "Karla", sans-serif;
+  font-weight: 200;
+}
+
+.karla-400 {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+}
+
+.karla-600 {
+  font-family: "Karla", sans-serif;
+  font-weight: 600;
+}
+
+.karla-700 {
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+}
+
+.karla-800 {
+  font-family: "Karla", sans-serif;
+  font-weight: 800;
+}
+
 .alert {
   padding: 15px;
   margin-bottom: 20px;

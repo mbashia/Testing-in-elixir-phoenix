@@ -12,7 +12,5 @@ defmodule ContactForm.Repo.Migrations.CreateContactRequestTable do
 
       timestamps()
     end
-
-    create unique_index(:clients_requests, [:email])
   end
 end
