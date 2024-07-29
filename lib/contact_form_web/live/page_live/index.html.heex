@@ -25,7 +25,7 @@
 
               <%= text_input(f, :first_name,
                 class:
-                  "w-[100%]    h-[45px] md:h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
+                  "w-[100%]    h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
               ) %>
               <p class="pt-5">
                 <%= error_tag(f, :first_name) %>
@@ -41,7 +41,7 @@
 
               <%= text_input(f, :last_name,
                 class:
-                  "w-[100%]    h-[45px] md:h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
+                  "w-[100%]    h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
               ) %>
               <p class="pt-5">
                 <%= error_tag(f, :last_name) %>
@@ -58,7 +58,7 @@
 
               <%= text_input(f, :email,
                 class:
-                  "w-[100%]    h-[45px] md:h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
+                  "w-[100%]    h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
               ) %>
               <p class="pt-5">
                 <%= error_tag(f, :email) %>
@@ -74,11 +74,11 @@
                 <span class="text-sm text-[#227c68]">&#42;</span>
               </div>
               <div class="w-[100%]  text-[#707070] karla-400 flex flex-col md:flex-row gap-2">
-                <div class=" my-0 md:my-2 w-[100%]  md:w-[50%] border px-4 py-0 md:py-2 rounded-lg">
+                <div class=" my-0 md:my-2 w-[100%]  md:w-[50%] border px-4 py-2 md:py-2 rounded-lg">
                   <%= radio_button(f, :query_type, "General inquiry", class: "mr-2 m-2 ") %>
                   <%= label(f, :query_type_general_inquiry, "General inquiry") %>
                 </div>
-                <div class=" my-0 md:my-2  w-[100%] w-md:[50%] border px-4 py-0 md:py-2 rounded-lg">
+                <div class=" my-0 md:my-2  w-[100%] w-md:[50%] border px-4 py-2 md:py-2 rounded-lg">
                   <%= radio_button(f, :query_type, "Support request", class: "mr-2 m-2") %>
                   <%= label(f, :query_type_support_request, "Support request") %>
                 </div>
@@ -123,7 +123,7 @@
             </div>
           </div>
 
-          <div class=" hover:scale-105 transition ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer mt-4 bg-[#227c68] text-white karla-400 text-sm  flex justify-center py-2.5 rounded-lg">
+          <div class=" hover:scale-105 transition ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer mt-6 bg-[#227c68] text-white karla-400 text-sm  flex justify-center py-2.5 rounded-lg">
             <%= submit("Submit",
               phx_disable_with: "Saving...",
               class: ""
