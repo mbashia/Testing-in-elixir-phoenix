@@ -1,93 +1,112 @@
-<div>
-  <h1 class="font-extrabold  text-xl  text-[#3C3E3E]">
-    Contact US
-  </h1>
-
-  <.form let={f} for={%{}} id="trip-form" phx-change="validate" phx-submit="save">
-    <div class="flex gap-2 md:w-[80%] w-[90%] mx-auto flex-col">
-      <div class="flex gap-2 md:flex-row flex-col w-[100%]">
-        <div class="md:w-[50%]">
-          <%= label(f, :first_name) %>
-
-          <%= text_input(f, :first_name,
-            class:
-              "w-[100%] h-[60px] border-2 my-2 border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FECC18] focus:border-transparent"
-          ) %>
-          <p class="pt-5">
-            <%= error_tag(f, :first_name) %>
-          </p>
-        </div>
-
-        <div class="md:w-[50%]">
-          <%= label(f, :last_name) %>
-
-          <%= text_input(f, :last_name,
-            class:
-              "w-[100%] h-[60px] border-2 my-2 border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FECC18] focus:border-transparent"
-          ) %>
-          <p class="pt-5">
-            <%= error_tag(f, :last_name) %>
-          </p>
-        </div>
-      </div>
-      <div class="flex gap-2 md:flex-row flex-col w-[100%]">
-        <div class="md:w-[50%]">
-          <%= label(f, :email_address) %>
-
-          <%= text_input(f, :email,
-            class:
-              "w-[100%] h-[60px] border-2 my-2 border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FECC18] focus:border-transparent"
-          ) %>
-          <p class="pt-5">
-            <%= error_tag(f, :email) %>
-          </p>
-        </div>
-
-        <div class="md:w-[50%]">
-          <%= label(f, :query_type) %>
-
-          <%= text_input(f, :query_type,
-            class:
-              "w-[100%] h-[60px] border-2 my-2 border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FECC18] focus:border-transparent"
-          ) %>
-          <p class="pt-5">
-            <%= error_tag(f, :query_type) %>
-          </p>
-        </div>
-      </div>
-      <div class="flex gap-2 md:flex-row flex-col w-[100%]">
-        <div class="md:w-[50%]">
-          <%= label(f, :message) %>
-
-          <%= textarea(f, :message,
-            class:
-              "w-[100%] h-[60px] border-2 my-2 border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FECC18] focus:border-transparent"
-          ) %>
-          <p class="pt-5">
-            <%= error_tag(f, :message) %>
-          </p>
-        </div>
-
-        <div class="md:w-[50%]">
-          <%= label(f, :"I consent to being contacted by the team") %>
-
-          <%= checkbox(f, :contact_consent,
-            class:
-              "w-[100%] h-[60px] border-2 my-2 border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FECC18] focus:border-transparent"
-          ) %>
-          <p class="pt-5">
-            <%= error_tag(f, :return_time) %>
-          </p>
-        </div>
-      </div>
-
-      <div class="flex justify-end">
-        <%= submit("Save",
-          phx_disable_with: "Saving...",
-          class:
-            "bg-[#3C3E3E] cursor-pointer text-[#FECC18] hover:scale-105 transition-all ease-in-out duration-500 px-8 py-2 text-xl  flex justify-center items-center gap-2  rounded-xl"
-        ) %>
-      </div>
+<div class="bg-white  w-[100%] h-[100%]  p-6 rounded-xl flex justify-center ">
+  <div class=" w-[100%] h-[100%] p-2 ">
+    <div class=" py-4 px-0 ">
+      <span class="font-extrabold  text-xl  text-[#3C3E3E]">
+        Contact US
+      </span>
     </div>
-  </.form>
+    <div class="w-[100%] ">
+      <.form
+        let={f}
+        for={%{}}
+        id="trip-form"
+        phx-change="validate"
+        phx-submit="save"
+        class="w-[100%]"
+      >
+        <div class="flex gap-2 md:w-[100%] w-[90%] flex-col">
+          <div class="flex gap-2 md:flex-row flex-col w-[100%]">
+            <div class="md:w-[50%]">
+              <%= label(f, :first_name) %>
+
+              <%= text_input(f, :first_name,
+                class:
+                  "w-[100%] h-[60px] border-2 my-2 border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FECC18] focus:border-transparent"
+              ) %>
+              <p class="pt-5">
+                <%= error_tag(f, :first_name) %>
+              </p>
+            </div>
+
+            <div class="md:w-[50%]">
+              <%= label(f, :last_name) %>
+
+              <%= text_input(f, :last_name,
+                class:
+                  "w-[100%] h-[60px] border-2 my-2 border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FECC18] focus:border-transparent"
+              ) %>
+              <p class="pt-5">
+                <%= error_tag(f, :last_name) %>
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-2 md:flex-row flex-col w-[100%]">
+            <div class="w-[100%]">
+              <%= label(f, :email_address) %>
+
+              <%= text_input(f, :email,
+                class:
+                  "w-[100%] h-[60px] border-2 my-2 border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FECC18] focus:border-transparent"
+              ) %>
+              <p class="pt-5">
+                <%= error_tag(f, :email) %>
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-2 md:flex-row flex-col w-[100%]">
+            <div class="w-[100%] flex flex-col gap-2">
+              <%= label(f, :query_type, "Query Type") %>
+              <div class="w-[100%] flex gap-2">
+                <div class="my-2 w-[50%] border px-4 py-2 rounded-lg">
+                  <%= radio_button(f, :query_type, "General inquiry", class: "mr-2 ") %>
+                  <%= label(f, :query_type_general_inquiry, "General inquiry") %>
+                </div>
+                <div class="my-2 w-[50%] border px-4 py-2 rounded-lg">
+                  <%= radio_button(f, :query_type, "Support request", class: "mr-2") %>
+                  <%= label(f, :query_type_support_request, "Support request") %>
+                </div>
+
+                <p class="pt-5">
+                  <%= error_tag(f, :query_type) %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 md:flex-row flex-col w-[100%]">
+            <div class="md:w-[100%]">
+              <%= label(f, :message) %>
+
+              <%= textarea(f, :message,
+                class:
+                  "w-[100%] h-[120px] border-2 my-2 border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FECC18] focus:border-transparent"
+              ) %>
+              <p class="pt-5">
+                <%= error_tag(f, :message) %>
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-2 md:flex-row flex-col w-[100%]">
+            <div class="md:w-[50%]">
+              <%= label(f, :"I consent to being contacted by the team") %>
+
+              <%= checkbox(f, :contact_consent, class: "") %>
+              <p class="pt-5">
+                <%= error_tag(f, :contact_consent) %>
+              </p>
+            </div>
+          </div>
+
+          <div class=" border border-red-500 flex justify-center py-2.5 rounded-lg">
+            <%= submit("Submit",
+              phx_disable_with: "Saving...",
+              class:
+                ""
+            ) %>
+          </div>
+        </div>
+      </.form>
+    </div>
+  </div>
 </div>
