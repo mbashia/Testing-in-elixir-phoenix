@@ -1,6 +1,6 @@
-<div class="bg-white  w-[100%] h-[100%]  p-6 rounded-xl flex justify-center ">
+<div class="bg-white  w-[100%] h-[100%] p-1  md:p-6 rounded-xl flex justify-center ">
   <div class=" w-[100%] h-[100%] p-2 ">
-    <div class=" py-4 px-0 ">
+    <div class=" py-2 md:py-4 px-0 ">
       <span class=" karla-700 text-2xl  text-[#3C3E3E]">
         Contact US
       </span>
@@ -14,9 +14,9 @@
         phx-submit="save"
         class="w-[100%]"
       >
-        <div class="flex gap-2 md:w-[100%] w-[90%] flex-col">
+        <div class="flex gap-0 md:gap-2 md:w-[100%] w-[90%] flex-col">
           <div class="flex gap-2 md:flex-row flex-col w-[100%]">
-            <div class="md:w-[50%]">
+            <div class="md:w-[50%] ">
               <div class="karla-400 text-[#707070]  flex gap-2">
                 <%= label(f, :first_name) %>
 
@@ -25,14 +25,14 @@
 
               <%= text_input(f, :first_name,
                 class:
-                  "w-[100%]    h-[60px] border-2 my-2 border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
+                  "w-[100%]    h-[45px] md:h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
               ) %>
               <p class="pt-5">
                 <%= error_tag(f, :first_name) %>
               </p>
             </div>
 
-            <div class="md:w-[50%]">
+            <div class="md:w-[50%] ">
               <div class="karla-400 text-[#707070]  flex gap-2">
                 <%= label(f, :last_name) %>
 
@@ -41,7 +41,7 @@
 
               <%= text_input(f, :last_name,
                 class:
-                  "w-[100%]    h-[60px] border-2 my-2 border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
+                  "w-[100%]    h-[45px] md:h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
               ) %>
               <p class="pt-5">
                 <%= error_tag(f, :last_name) %>
@@ -58,7 +58,7 @@
 
               <%= text_input(f, :email,
                 class:
-                  "w-[100%]    h-[60px] border-2 my-2 border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
+                  "w-[100%]    h-[45px] md:h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
               ) %>
               <p class="pt-5">
                 <%= error_tag(f, :email) %>
@@ -73,13 +73,13 @@
 
                 <span class="text-sm text-[#227c68]">&#42;</span>
               </div>
-              <div class="w-[100%]  text-[#707070] karla-400 flex gap-2">
-                <div class="my-2  w-[50%] border px-4 py-2 rounded-lg">
-                  <%= radio_button(f, :query_type, "General inquiry", class: "mr-2  ") %>
+              <div class="w-[100%]  text-[#707070] karla-400 flex flex-col md:flex-row gap-2">
+                <div class=" my-0 md:my-2 w-[100%]  md:w-[50%] border px-4 py-0 md:py-2 rounded-lg">
+                  <%= radio_button(f, :query_type, "General inquiry", class: "mr-2 m-2 ") %>
                   <%= label(f, :query_type_general_inquiry, "General inquiry") %>
                 </div>
-                <div class="my-2 w-[50%] border px-4 py-2 rounded-lg">
-                  <%= radio_button(f, :query_type, "Support request", class: "mr-2 ") %>
+                <div class=" my-0 md:my-2  w-[100%] w-md:[50%] border px-4 py-0 md:py-2 rounded-lg">
+                  <%= radio_button(f, :query_type, "Support request", class: "mr-2 m-2") %>
                   <%= label(f, :query_type_support_request, "Support request") %>
                 </div>
 
@@ -99,7 +99,7 @@
 
               <%= textarea(f, :message,
                 class:
-                  "w-[100%] h-[120px] border-2 my-2 border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
+                  "w-[100%] h-[120px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
               ) %>
               <p class="pt-5">
                 <%= error_tag(f, :message) %>
@@ -108,14 +108,14 @@
           </div>
 
           <div class="flex gap-2 md:flex-row flex-col w-[100%]">
-            <div class="md:w-[100%] flex gap-2 items-center">
+            <div class="md:w-[100%] flex gap-4 md:gap-2 items-center">
               <%= checkbox(f, :contact_consent, class: "") %>
-              <div class="karla-400 text-[#707070]  flex gap-2">
+              <div class="karla-400 text-[#707070]  flex ">
                 <span class="karla-400 text-[#707070] karla-400 ">
-                  I consent to being contacted by the team
+                  I consent to being contacted by the team                <span class="text-sm text-[#227c68]">&#42;</span>
+
                 </span>
 
-                <span class="text-sm text-[#227c68]">&#42;</span>
               </div>
               <p class="pt-5">
                 <%= error_tag(f, :contact_consent) %>
