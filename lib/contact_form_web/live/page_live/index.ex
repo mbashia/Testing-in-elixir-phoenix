@@ -19,7 +19,8 @@ defmodule ContactFormWeb.PageLive.Index do
       socket.assigns.client_request
       |> Clients.change_contact_form(client_request_params)
       |> Map.put(:action, :validate)
-      IO.inspect changeset
+
+    IO.inspect(changeset)
 
     {:noreply, assign(socket, :changeset, changeset)}
   end

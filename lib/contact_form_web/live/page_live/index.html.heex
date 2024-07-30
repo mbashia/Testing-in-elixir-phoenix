@@ -9,10 +9,10 @@
       <.form
         let={f}
         for={@changeset}
-        id="trip-form"
         phx-change="validate"
         phx-submit="save"
         class="w-[100%]"
+        id="contact-request-form"
       >
         <div class="flex gap-0 md:gap-2 md:w-[100%] w-[90%] flex-col">
           <div class="flex gap-2 md:flex-row flex-col w-[100%]">
@@ -112,10 +112,9 @@
               <%= checkbox(f, :contact_consent, class: "") %>
               <div class="karla-400 text-[#707070]  flex ">
                 <span class="karla-400 text-[#707070] karla-400 ">
-                  I consent to being contacted by the team                <span class="text-sm text-[#227c68]">&#42;</span>
-
+                  I consent to being contacted by the team
+                  <span class="text-sm text-[#227c68]">&#42;</span>
                 </span>
-
               </div>
               <p class="pt-5">
                 <%= error_tag(f, :contact_consent) %>
