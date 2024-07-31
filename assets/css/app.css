@@ -161,7 +161,42 @@
 .invalid-feedback {
   color: #a94442;
   display: block;
-  margin: -1rem 0 2rem;
+  margin: 0;
+  padding: 0;
+}
+.phx-package-modal-content {
+  background-color: #fefefe;
+  margin: 15vh auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  border-radius: 15px;
+}
+.phx-package-modal-close {
+  color: white;
+  float: right;
+  font-size: 20px;
+  font-weight: 100px;
+  margin: 0;
+  margin-left: 5px;
+}
+
+.phx-modal-content {
+  background-color: #fefefe;
+  margin: 15vh auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .phx-modal-content {
+    width: 90%;
+  }
+  .phx-package-modal-content {
+    width: 90%;
+  }
 }
 
 /* LiveView specific classes for your customization */

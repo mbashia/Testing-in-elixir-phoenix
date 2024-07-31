@@ -86,7 +86,7 @@ defmodule ContactFormWeb do
 
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
-
+      import ContactFormWeb.LiveHelpers
       import ContactFormWeb.ErrorHelpers
       import ContactFormWeb.Gettext
       alias ContactFormWeb.Router.Helpers, as: Routes
