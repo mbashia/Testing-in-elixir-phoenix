@@ -28,6 +28,7 @@ defmodule ContactForm.ClientsRequests.Client do
     |> validate_query_type()
     |> validate_consent_field(attrs)
     |> validate_email()
+    |> validate_message_length()
   end
 
   defp validate_email(changeset) do
@@ -35,6 +36,11 @@ defmodule ContactForm.ClientsRequests.Client do
     |> validate_required([:email])
     |> validate_format(:email, ~r/^[^\s]+@[^\s]+$/, message: "please enter a valid email address")
     |> validate_length(:email, max: 160)
+  end
+
+  def validate_message_length(changeset) do
+    changeset
+    |> validate_length(:message, max: 250, message: "Message must be less than 250 characters")
   end
 
   defp validate_first_name_last_name_and_message(changeset) do
