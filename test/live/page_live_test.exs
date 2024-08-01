@@ -210,7 +210,7 @@ defmodule ContactFormWeb.PageLiveTest do
       )
       |> render_submit()
 
-      assert render(live_view) =~ "Request  created successfully"
+      assert render(live_view) =~ "Thanks for completing the form,we&#39;ll be in touch soon!"
     end
   end
 end
