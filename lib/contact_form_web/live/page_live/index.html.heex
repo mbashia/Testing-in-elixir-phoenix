@@ -1,5 +1,5 @@
-<div class="bg-white  w-[100%] md:w-[750px] h-[100%] p-1  md:p-6 rounded-xl flex justify-center ">
-  <div class=" w-[100%] h-[100%] p-2 ">
+<div class="bg-white   w-[100%] md:w-[750px] h-[100%] p-1  md:p-6 rounded-xl flex justify-center ">
+  <div class=" w-[100%] h-[100%] py-2 px-4">
     <div class=" py-2 md:py-4 px-0 ">
       <span class=" karla-700 text-2xl  text-[#3C3E3E]">
         Contact US
@@ -16,7 +16,7 @@
       >
         <div class="flex gap-0 md:gap-2 md:w-[100%] w-[90%] flex-col">
           <div class="flex gap-2 md:flex-row flex-col w-[100%]">
-            <div class="md:w-[50%] pb-0 ">
+            <div class="md:w-[50%] pb-4 md:pb-0 ">
               <div class="karla-400 text-[#5f6563]  flex gap-2">
                 <%= label(f, :first_name, "First Name") %>
 
@@ -25,14 +25,14 @@
 
               <%= text_input(f, :first_name,
                 class:
-                  "w-[100%]    karla-400 h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
+                  "w-[100%]    karla-400 h-[50px] md:h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
               ) %>
-              <div class="  text-base text-red-500 pt-0 pb-0 karla-400 m-0">
+              <div class=" text-sm md:text-base text-red-500 pt-0 pb-0 karla-400 m-0">
                 <%= error_tag(f, :first_name) %>
               </div>
             </div>
 
-            <div class="md:w-[50%] pb-0 ">
+            <div class="md:w-[50%] pb-4 md:pb-0 ">
               <div class="karla-400 text-[#5f6563]  flex gap-2">
                 <%= label(f, :last_name, "Last Name") %>
 
@@ -41,14 +41,14 @@
 
               <%= text_input(f, :last_name,
                 class:
-                  "w-[100%]    karla-400 h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
+                  "w-[100%]    karla-400 h-[50px] md:h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
               ) %>
-              <div class="  text-base text-red-500 pt-0 pb-0 karla-400 m-0">
+              <div class="  text-sm md:text-base text-red-500 pt-0 pb-0 karla-400 m-0">
                 <%= error_tag(f, :last_name) %>
               </div>
             </div>
           </div>
-          <div class="flex  gap-2 md:flex-row flex-col w-[100%]">
+          <div class="flex pb-4 md:pb-0 gap-2 md:flex-row flex-col w-[100%]">
             <div class="w-[100%]">
               <div class="karla-400 text-[#5f6563]  flex gap-2">
                 <%= label(f, :email_address, "Email Address") %>
@@ -58,22 +58,22 @@
 
               <%= text_input(f, :email,
                 class:
-                  "w-[100%]    karla-400 h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
+                  "w-[100%]    karla-400 h-[50px] md:h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
               ) %>
-              <div class="  text-base text-red-500 pt-0 pb-0 karla-400 m-0">
+              <div class="  text-sm md:text-base text-red-500 pt-0 pb-0 karla-400 m-0">
                 <%= error_tag(f, :email) %>
               </div>
             </div>
           </div>
 
-          <div class="flex gap-2 md:flex-row flex-col w-[100%]">
+          <div class="flex gap-2  pb-4 md:pb-4 md:flex-row flex-col w-[100%]">
             <div class="w-[100%] flex flex-col gap-2">
               <div class="karla-400 text-[#5f6563]  flex gap-2">
                 <%= label(f, :query_type, "Query Type") %>
 
                 <span class="text-sm text-[#227c68]">&#42;</span>
               </div>
-              <div class="w-[100%]   text-[#5f6563] karla-400 flex flex-col md:flex-row gap-2">
+              <div class="w-[100%]  text-[#5f6563] karla-400 flex flex-col md:flex-row gap-4 md:gap-2">
                 <div class=" my-0 md:my-2 w-[100%]  md:w-[50%] pb-0 border px-4 py-2 md:py-2 rounded-lg">
                   <%= radio_button(f, :query_type, "General inquiry", class: "mr-2 m-2 ") %>
                   <%= label(f, :query_type_general_inquiry, "General inquiry") %>
@@ -84,13 +84,13 @@
                 </div>
               </div>
               <div>
-                <div class="  text-base text-red-700 pt-0 pb-0 karla-400 m-0">
+                <div class=" text-sm md:text-base text-red-700 pt-0 pb-0 karla-400 m-0">
                   <%= error_tag(f, :query_type) %>
                 </div>
               </div>
             </div>
           </div>
-          <div class="flex gap-2 md:flex-row flex-col w-[100%]">
+          <div class="flex pb-4 md:pb-0 gap-2 md:flex-row flex-col w-[100%]">
             <div class="md:w-[100%]">
               <div class="karla-400 text-[#5f6563]  flex gap-2">
                 <%= label(f, :message) %>
@@ -102,7 +102,7 @@
                 class:
                   "w-[100%] h-[120px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
               ) %>
-              <div class="  text-base text-red-500 pt-0 pb-0 karla-400 m-0">
+              <div class="  text-sm md:text-base text-red-500 pt-0 pb-0 karla-400 m-0">
                 <%= error_tag(f, :message) %>
               </div>
             </div>
@@ -119,13 +119,13 @@
                   </span>
                 </div>
               </div>
-              <div class="  text-base  text-red-500 pt-2 pb-0 karla-400 m-0">
+              <div class="  text-sm md:text-base  text-red-500 pt-2 pb-0 karla-400 m-0">
                 <%= error_tag(f, :contact_consent) %>
               </div>
             </div>
           </div>
 
-          <div class="  hover:scale-105 transition ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer mt-6 bg-[#227c68] text-white karla-400 text-sm  flex justify-center py-4 rounded-lg">
+          <div class="  hover:scale-105 transition ease-in-out duration-300 hover:shadow-xl hover:cursor-pointer mt-6 bg-[#227c68] text-white karla-400 text-sm  flex justify-center py-2 md:py-4 rounded-lg">
             <%= submit("Submit",
               phx_disable_with: "Saving...",
               class: ""

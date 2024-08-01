@@ -11,7 +11,7 @@ defmodule ContactFormWeb.PageLive.Index do
      |> assign(:changeset, changeset)
      |> assign(:client_request, %Client{})
      |> assign(:errors_list_length, 0)
-     |> assign(:live_view_height, "md:h-[80vh]")}
+     |> assign(:live_view_height, "h-[94vh] md:h-[80vh]")}
   end
 
   def handle_event("validate", %{"client" => client_request_params}, socket) do
@@ -44,10 +44,13 @@ defmodule ContactFormWeb.PageLive.Index do
 
   def get_live_view_height(changeset) do
     case length(changeset.errors) do
-      0 -> "h-[80vh]"
-      _ -> "h-[90vh]"
+      0 -> "h-[94vh] md:h-[80vh] transition ease-in-out duration-300"
+      _ -> "h-[950px]  md:h-[92vh] transition ease-in-out duration-300"
     end
   end
+
+
+
 end
 
 # active:ring-2 active:ring-[#227c68] active:border-transparent
