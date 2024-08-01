@@ -3,8 +3,8 @@ defmodule ContactFormWeb.PageLive.SuccessComponent do
 
   def render(assigns) do
     ~H"""
-    <div class="absolute mb-[-10px] inset-x-0 bottom-full flex justify-center">
-      <div class="bg-[#2c4144] w-[75%] flex flex-col gap-2 h-[100px] rounded-xl px-6 py-4">
+    <div class="absolute top-0 md:top-auto mb-[-10px] inset-x-0 bottom-full flex justify-center">
+      <div class="bg-[#2c4144] w-[75%] flex flex-col justify-center md:justify-start gap-2 h-[120px] md:h-[100px] rounded-xl px-6 py-4">
         <div class="flex justify-start items-center gap-4">
           <span>
             <svg
