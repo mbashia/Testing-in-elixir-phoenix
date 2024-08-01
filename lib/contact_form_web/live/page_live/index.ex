@@ -13,14 +13,10 @@ defmodule ContactFormWeb.PageLive.Index do
   end
 
   def handle_event("validate", %{"client" => client_request_params}, socket) do
-    # IO.inspect(client_request_params)
-
     changeset =
       socket.assigns.client_request
       |> Clients.change_contact_form(client_request_params)
       |> Map.put(:action, :validate)
-
-    IO.inspect(changeset)
 
     {:noreply, assign(socket, :changeset, changeset)}
   end

@@ -8,10 +8,10 @@ defmodule ContactFormWeb.PageLiveTest do
     test "form renders correctly", %{conn: conn} do
       {:ok, live_view, html} = live(conn, Routes.page_index_path(conn, :index))
 
-      assert html =~ "First name"
-      assert html =~ "Last name"
+      assert html =~ "First Name"
+      assert html =~ "Last Name"
 
-      assert html =~ "Email addres"
+      assert html =~ "Email Address"
 
       assert html =~ "Query Type"
 
@@ -37,7 +37,7 @@ defmodule ContactFormWeb.PageLiveTest do
       |> render_change()
 
       refute render(live_view) =~ "can't be blank"
-      assert render(live_view) =~ "must have the @ sign and no spaces"
+      assert render(live_view) =~ "please enter a valid email address"
     end
 
     test "cannot submit form with invalid inputs", %{conn: conn} do

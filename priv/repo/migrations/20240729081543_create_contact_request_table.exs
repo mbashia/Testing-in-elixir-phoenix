@@ -8,7 +8,7 @@ defmodule ContactForm.Repo.Migrations.CreateContactRequestTable do
       add :email, :string
       add :query_type, :string
       add :message, :string
-      add :contact_consent, :boolean, default: false
+      add :contact_consent, :boolean
 
       timestamps()
     end
