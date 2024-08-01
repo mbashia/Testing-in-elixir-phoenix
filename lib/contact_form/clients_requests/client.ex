@@ -48,7 +48,11 @@ defmodule ContactForm.ClientsRequests.Client do
   end
 
   defp validate_consent_field(changeset, %{"contact_consent" => "false"}) do
-    add_error(changeset, :contact_consent, "To submit this form please allow to be contacted")
+    add_error(
+      changeset,
+      :contact_consent,
+      "To submit this form, please consent to being contacted"
+    )
   end
 
   defp validate_consent_field(changeset, _attrs) do

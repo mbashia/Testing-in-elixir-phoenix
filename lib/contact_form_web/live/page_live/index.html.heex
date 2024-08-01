@@ -27,7 +27,7 @@
                 class:
                   "w-[100%]    karla-400 h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
               ) %>
-              <div class="  text-xs pt-0 pb-0 karla-400 m-0">
+              <div class="  text-base text-red-500 pt-0 pb-0 karla-400 m-0">
                 <%= error_tag(f, :first_name) %>
               </div>
             </div>
@@ -43,7 +43,7 @@
                 class:
                   "w-[100%]    karla-400 h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
               ) %>
-              <div class="  text-xs pt-0 pb-0 karla-400 m-0">
+              <div class="  text-base text-red-500 pt-0 pb-0 karla-400 m-0">
                 <%= error_tag(f, :last_name) %>
               </div>
             </div>
@@ -60,7 +60,7 @@
                 class:
                   "w-[100%]    karla-400 h-[60px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
               ) %>
-              <div class="  text-xs pt-0 pb-0 karla-400 m-0">
+              <div class="  text-base text-red-500 pt-0 pb-0 karla-400 m-0">
                 <%= error_tag(f, :email) %>
               </div>
             </div>
@@ -84,7 +84,7 @@
                 </div>
               </div>
               <div>
-                <div class="  text-xs pt-0 pb-0 karla-400 m-0">
+                <div class="  text-base text-red-700 pt-0 pb-0 karla-400 m-0">
                   <%= error_tag(f, :query_type) %>
                 </div>
               </div>
@@ -102,22 +102,24 @@
                 class:
                   "w-[100%] h-[120px] border-2  my-0 md:my-2  border-gray-300 rounded-xl px-4 py-0 md:py-2 focus:outline-none focus:ring-2 focus:ring-[#227c68]/70 focus:border-transparent"
               ) %>
-              <div class="  text-xs pt-0 pb-0 karla-400 m-0">
+              <div class="  text-base text-red-500 pt-0 pb-0 karla-400 m-0">
                 <%= error_tag(f, :message) %>
               </div>
             </div>
           </div>
 
           <div class="flex gap-2 md:flex-row flex-col w-[100%]">
-            <div class="md:w-[100%] flex gap-4 md:gap-4 items-center">
-              <%= checkbox(f, :contact_consent, class: "") %>
-              <div class="karla-400 text-[#5f6563]  flex ">
-                <span class="karla-400 text-[#5f6563] karla-400 ">
-                  I consent to being contacted by the team
-                  <span class="text-sm text-[#227c68]">&#42;</span>
-                </span>
+            <div>
+              <div class="md:w-[100%] flex gap-4 md:gap-4 items-center">
+                <%= checkbox(f, :contact_consent, class: "") %>
+                <div class="karla-400 text-[#5f6563]  flex ">
+                  <span class="karla-400 text-[#5f6563] karla-400 ">
+                    I consent to being contacted by the team
+                    <span class="text-sm text-[#227c68]">&#42;</span>
+                  </span>
+                </div>
               </div>
-              <div class="  text-xs pt-0 pb-0 karla-400 m-0">
+              <div class="  text-base  text-red-500 pt-2 pb-0 karla-400 m-0">
                 <%= error_tag(f, :contact_consent) %>
               </div>
             </div>

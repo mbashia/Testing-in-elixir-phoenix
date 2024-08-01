@@ -9,7 +9,9 @@ defmodule ContactFormWeb.PageLive.Index do
     {:ok,
      socket
      |> assign(:changeset, changeset)
-     |> assign(:client_request, %Client{})}
+     |> assign(:client_request, %Client{})
+     |> assign(:errors_list_length, 0)
+     |> assign(:live_view_height, "md:h-[80vh]")}
   end
 
   def handle_event("validate", %{"client" => client_request_params}, socket) do
@@ -18,7 +20,11 @@ defmodule ContactFormWeb.PageLive.Index do
       |> Clients.change_contact_form(client_request_params)
       |> Map.put(:action, :validate)
 
-    {:noreply, assign(socket, :changeset, changeset)}
+    IO.inspect(changeset)
+
+    {:noreply,
+     socket
+     |> assign(:changeset, changeset)}
   end
 
   def handle_event("save", %{"client" => client_request_params}, socket) do
@@ -29,7 +35,17 @@ defmodule ContactFormWeb.PageLive.Index do
          |> put_flash(:info, "Request  created successfully")}
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        {:noreply, assign(socket, changeset: changeset)}
+        {:noreply,
+         socket
+         |> assign(:changeset, changeset)
+         |> assign(:live_view_height, get_live_view_height(changeset))}
+    end
+  end
+
+  def get_live_view_height(changeset) do
+    case length(changeset.errors) do
+      0 -> "h-[80vh]"
+      _ -> "h-[90vh]"
     end
   end
 end

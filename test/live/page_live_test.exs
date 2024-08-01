@@ -150,7 +150,7 @@ defmodule ContactFormWeb.PageLiveTest do
       )
       |> render_change()
 
-      assert render(live_view) =~ "To submit this form please allow to be contacted"
+      assert render(live_view) =~ "To submit this form, please consent to being contacted"
     end
 
     # test "validates inputs", %{conn: conn} do
@@ -190,7 +190,7 @@ defmodule ContactFormWeb.PageLiveTest do
       |> render_submit()
 
       assert render(live_view) =~ "This field is required"
-      assert render(live_view) =~ "To submit this form please allow to be contacted"
+      assert render(live_view) =~ "To submit this form, please consent to being contacted"
       assert render(live_view) =~ "please enter a valid email address"
     end
 
