@@ -14,7 +14,7 @@ defmodule ContactFormWeb.PageLive.Index do
      |> assign(:changeset, changeset)
      |> assign(:client_request, %Client{})
      |> assign(:errors_list_length, 0)
-     |> assign(:is_success, true)
+     |> assign(:is_success, false)
      |> assign(
        :first_name_input_class,
        @input_field_class
