@@ -58,9 +58,12 @@ defmodule ContactFormWeb.PageLive.Index do
   def handle_event("save", %{"client" => client_request_params}, socket) do
     case Clients.create_contact_request_record(client_request_params) do
       {:ok, _record} ->
+        changeset = Clients.change_contact_form(%Client{})
+
         {:noreply,
          socket
-         |> assign(:is_success, true)}
+         |> assign(:is_success, true)
+         |> assign(:changeset, changeset)}
 
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply,
