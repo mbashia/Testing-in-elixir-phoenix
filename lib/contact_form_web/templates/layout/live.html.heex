@@ -1,4 +1,4 @@
-<main class={"m-4 md:m-0 #{@live_view_height} "}>
+<main class={"m-4 md:m-0  "}>
   <%= if @flash["info"] do %>
     <p class="alert alert-info" role="alert" phx-click="lv:clear-flash" phx-value-key="info">
       <%= live_flash(@flash, :info) %>

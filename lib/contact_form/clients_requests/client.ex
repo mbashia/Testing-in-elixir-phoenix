@@ -53,15 +53,22 @@ defmodule ContactForm.ClientsRequests.Client do
     |> validate_required([:query_type], message: "Please select a query type")
   end
 
-  defp validate_consent_field(changeset, %{"contact_consent" => "false"}) do
-    add_error(
-      changeset,
-      :contact_consent,
-      "To submit this form, please consent to being contacted"
-    )
-  end
+  # defp validate_consent_field(changeset, %{"contact_consent" => "false"}) do
+  #   add_error(
+  #     changeset,
+  #     :contact_consent,
+  #     "To submit this form, please consent to being contacted"
+  #   )
+  # end
 
-  defp validate_consent_field(changeset, _attrs) do
+  # defp validate_consent_field(changeset, _attrs) do
+  #   changeset
+  # end
+
+  defp validate_consent_field(changeset, attrs) do
     changeset
+    |> validate_acceptance(:contact_consent,
+      message: "To submit this form, please consent to being contacted"
+    )
   end
 end

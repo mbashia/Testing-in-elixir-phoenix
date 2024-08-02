@@ -39,7 +39,7 @@ defmodule ContactFormWeb.PageLive.Index do
        :contact_consent_input_class,
        @input_field_class
      )
-     |> assign(:live_view_height, "h-[94vh] md:h-[80vh]")}
+    }
   end
 
   def handle_event("validate", %{"client" => client_request_params}, socket) do
@@ -82,7 +82,7 @@ defmodule ContactFormWeb.PageLive.Index do
   def get_live_view_height(changeset) do
     case length(changeset.errors) do
       0 -> "h-[94vh] md:h-[80vh] transition ease-in-out duration-300"
-      _ -> "h-[950px]  md:h-[93vh] transition ease-in-out duration-300"
+      _ -> "h-[950px]  md:h-[100%] transition ease-in-out duration-300"
     end
   end
 
