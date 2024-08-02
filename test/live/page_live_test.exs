@@ -192,26 +192,6 @@ defmodule ContactFormWeb.PageLiveTest do
       assert render(live_view) =~ "To submit this form, please consent to being contacted"
     end
 
-    # test "validates inputs", %{conn: conn} do
-    #   {:ok, live_view, _html} = live(conn, Routes.page_index_path(conn, :index))
-
-    #   live_view
-    #   |> form("#contact-request-form",
-    #     client: %{
-    #       first_name: "John",
-    #       last_name: "Doe",
-    #       email: "invalid",
-    #       query_type: "General inquiry",
-    #       message: "this is a message",
-    #       contact_consent: false
-    #     }
-    #   )
-    #   |> render_change()
-
-    #   refute render(live_view) =~ "can't be blank"
-    #   assert render(live_view) =~ "please enter a valid email address"
-    # end
-
     test "cannot submit form with invalid inputs", %{conn: conn} do
       {:ok, live_view, _html} = live(conn, Routes.page_index_path(conn, :index))
 
