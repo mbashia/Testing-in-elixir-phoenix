@@ -7,7 +7,7 @@ import Config
 # Run `mix help test` for more information.
 config :contact_form, ContactForm.Repo,
   username: "postgres",
-  password: "Khohisan@7",
+  password: System.get_env("MYSQL_PASS"),
   database: "contact_form_test#{System.get_env("MIX_TEST_PARTITION")}",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox,

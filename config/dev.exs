@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :contact_form, ContactForm.Repo,
   username: "postgres",
-  password: "Khohisan@7",
+  password: System.get_env("MYSQL_PASS"),
   database: "contact_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
