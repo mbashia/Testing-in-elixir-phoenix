@@ -3,5 +3,4 @@ defmodule ContactForm.Repo do
     otp_app: :contact_form,
     adapter: Ecto.Adapters.Postgres
 
-    ##added
 end
