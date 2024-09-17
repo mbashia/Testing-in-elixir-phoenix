@@ -38,8 +38,7 @@ defmodule ContactFormWeb.PageLive.Index do
      |> assign(
        :contact_consent_input_class,
        @input_field_class
-     )
-    }
+     )}
   end
 
   def handle_event("validate", %{"client" => client_request_params}, socket) do
@@ -77,8 +76,6 @@ defmodule ContactFormWeb.PageLive.Index do
          |> assign(:contact_consent_input_class, has_contact_consent_error?(changeset))}
     end
   end
-
- 
 
   def error_class(changeset, field, height \\ "h-[50px] md:h-[60px]") do
     if Enum.any?(changeset.errors, fn {error_field, _error} -> error_field == field end) do
