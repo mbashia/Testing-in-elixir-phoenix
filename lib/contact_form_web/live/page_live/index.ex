@@ -74,17 +74,11 @@ defmodule ContactFormWeb.PageLive.Index do
          |> assign(:email_input_class, has_email_error?(changeset))
          |> assign(:query_type_input_class, has_query_type_error?(changeset))
          |> assign(:message_input_class, has_message_error?(changeset))
-         |> assign(:contact_consent_input_class, has_contact_consent_error?(changeset))
-         |> assign(:live_view_height, get_live_view_height(changeset))}
+         |> assign(:contact_consent_input_class, has_contact_consent_error?(changeset))}
     end
   end
 
-  def get_live_view_height(changeset) do
-    case length(changeset.errors) do
-      0 -> "h-[94vh] md:h-[80vh] transition ease-in-out duration-300"
-      _ -> "h-[950px]  md:h-[100%] transition ease-in-out duration-300"
-    end
-  end
+ 
 
   def error_class(changeset, field, height \\ "h-[50px] md:h-[60px]") do
     if Enum.any?(changeset.errors, fn {error_field, _error} -> error_field == field end) do
