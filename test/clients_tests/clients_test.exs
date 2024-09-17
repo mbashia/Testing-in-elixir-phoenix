@@ -11,7 +11,7 @@ defmodule ContactFormWeb.ClientsTest do
     email: "johndoe@gmail.com",
     query_type: "General inquiry",
     message: "this is a message",
-    contact_consent: false
+    contact_consent: true
   }
 
   @invalid_attrs %{
