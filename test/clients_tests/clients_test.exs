@@ -1,6 +1,6 @@
 defmodule ContactFormWeb.ClientsTest do
   use ContactFormWeb.ConnCase
-  #   use ExUnit.Case, async: true
+  use ExUnit.Case, async: true
 
   alias ContactForm.ClientsRequests.Client
   alias ContactForm.ClientsRequests.Clients
@@ -18,9 +18,9 @@ defmodule ContactFormWeb.ClientsTest do
     first_name: "John",
     last_name: "Doe",
     email: "invalidemail",
-    query_type: "",
+    query_type: "General inquiry",
     message: "this is a message",
-    contact_consent: false
+    contact_consent: true
   }
 
   test "create_contact_request_record/1 with valid data" do
@@ -30,7 +30,7 @@ defmodule ContactFormWeb.ClientsTest do
     assert record.email == "johndoe@gmail.com"
     assert record.query_type == "General inquiry"
     assert record.message == "this is a message"
-    assert record.contact_consent == false
+    assert record.contact_consent == true
   end
 
   test "create_contact_request_record/1 with invalid data returns invalid changeset" do
@@ -57,6 +57,50 @@ defmodule ContactFormWeb.ClientsTest do
     assert changeset.valid? == false
   end
 
+  test "invalid changeset with misssing firstname" do
+    invalid_attrs = Map.delete(@valid_attrs, :first_name)
+    changeset = Client.changeset(%Client{}, invalid_attrs)
+    refute changeset.valid?
+    [first_name: {error_message, _}] = changeset.errors
+    assert error_message == "This field is required"
+  end
 
-  
+  test "invalid changeset with misssing lastname" do
+    invalid_attrs = Map.delete(@valid_attrs, :last_name)
+    changeset = Client.changeset(%Client{}, invalid_attrs)
+    refute changeset.valid?
+    [last_name: {error_message, _}] = changeset.errors
+    assert error_message == "This field is required"
+  end
+
+  test "invalid changeset with wrong email format" do
+    changeset = Client.changeset(%Client{}, @invalid_attrs)
+    refute changeset.valid?
+    [email: {error_message, _}] = changeset.errors
+    assert error_message == "please enter a valid email address"
+  end
+
+  test "invalid changeste with message longer than 250 characters" do
+    invalid_attrs = Map.put(@valid_attrs, :message, String.duplicate("a", 251))
+    changeset = Client.changeset(%Client{}, invalid_attrs)
+    refute changeset.valid?
+    [message: {error_message, _}] = changeset.errors
+    assert error_message == "Message must be less than 250 characters"
+  end
+
+  test "invalid changeset with missing query type" do
+    invalid_attrs = Map.delete(@valid_attrs, :query_type)
+    changeset = Client.changeset(%Client{}, invalid_attrs)
+    refute changeset.valid?
+    [query_type: {error_message, _}] = changeset.errors
+    assert error_message == "Please select a query type"
+  end
+
+  test "invalid changeset when contact consent is false" do
+    invalid_attrs = Map.put(@valid_attrs, :contact_consent, false)
+    changeset = Client.changeset(%Client{}, invalid_attrs)
+    refute changeset.valid?
+    [contact_consent: {error_message, _}] = changeset.errors
+    assert error_message == "To submit this form, please consent to being contacted"
+  end
 end
