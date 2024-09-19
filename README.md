@@ -15,7 +15,7 @@ Make sure you have Elixir and Phoenix installed. Then, run:
 
 
 ```
-   Install Dependencies:
+Install Dependencies:
 mix deps.get
 Create and Migrate the Database:
 
