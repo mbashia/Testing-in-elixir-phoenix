@@ -1,19 +1,36 @@
-# ContactForm
+# Contact Form Testing Example
 
-To start your Phoenix server:
+## Getting Started
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+To follow along with this guide, you'll need to set up the project locally. Here are the steps:
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+1. **Clone the Repository:**
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+   ```bash
+   git clone https://github.com/mbashia/Testing-in-elixir-phoenix.git
+   cd contact_form
 
-## Learn more
+   Install Dependencies:
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Make sure you have Elixir and Phoenix installed. Then, run:
+
+
+```mix deps.get
+Create and Migrate the Database:
+
+Set up your database configuration in config/dev.exs, then run:
+
+
+mix ecto.create
+mix ecto.migrate
+Run the Tests:
+
+To verify that everything is working correctly, run:
+
+mix test
+Start the Phoenix Server ():
+
+If you want to see the application in action, start the server with:
+
+mix phx.server
+You can then navigate to http://localhost:4000 in your browser to view the application.
