@@ -10,12 +10,13 @@ To follow along with this guide, you'll need to set up the project locally. Here
    git clone https://github.com/mbashia/Testing-in-elixir-phoenix.git
    cd contact_form
 
-   Install Dependencies:
 
 Make sure you have Elixir and Phoenix installed. Then, run:
 
 
-```mix deps.get
+```
+   Install Dependencies:
+mix deps.get
 Create and Migrate the Database:
 
 Set up your database configuration in config/dev.exs, then run:
