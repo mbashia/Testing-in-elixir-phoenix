@@ -17,7 +17,7 @@ defmodule ContactFormWeb.Router do
   scope "/", ContactFormWeb do
     pipe_through :browser
 
-    # get "/", PageController, :index
+    get "/phoenix", PageController, :index
     live "/", PageLive.Index, :index
   end
 
