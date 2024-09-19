@@ -29,7 +29,7 @@ Run the Tests:
 To verify that everything is working correctly, run:
 
 mix test
-Start the Phoenix Server ():
+Start the Phoenix Server:
 
 If you want to see the application in action, start the server with:
 
